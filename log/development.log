@@ -163,3 +163,21 @@ Processing by PostsController#new as HTML
 Completed 200 OK in 24ms (Views: 14.3ms | ActiveRecord: 1.4ms)
 
 
+Started POST "/posts" for 67.189.18.13 at 2020-04-27 10:20:06 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J41w8/Bd9Ysy+F7hTlAZ9KwWBqdsDOJ7CXEg4H/ySEwrxcmNM6R47q3+NQcn9zvmpS14osShL9hhl9qCwMUjwQ==", "title"=>"u", "description"=>"u", "commit"=>"Submit Post"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "u"], ["description", "u"], ["created_at", "2020-04-27 10:20:06.169160"], ["updated_at", "2020-04-27 10:20:06.169160"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://178.128.13.85:42343/posts
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/posts" for 67.189.18.13 at 2020-04-27 10:20:06 +0000
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.2ms)
+
+
