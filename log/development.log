@@ -43,3 +43,29 @@ Completed 200 OK in 27ms (Views: 10.4ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "title"], ["description", "desc"], ["created_at", "2020-04-27 10:07:51.671709"], ["updated_at", "2020-04-27 10:07:51.671709"]]
   [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 67.189.18.13 at 2020-04-27 10:15:11 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/local/rvm/gems/ruby-2.6.1/gems/railties-5.0.7.2/lib/rails/templates/rails/welcome/index.html.erb (3.2ms)
+Completed 200 OK in 16ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 67.189.18.13 at 2020-04-27 10:15:15 +0000
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 307ms (Views: 300.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/posts" for 67.189.18.13 at 2020-04-27 10:15:21 +0000
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WqLJfiIurLiLUDXvhUX1xjph559Ycbgzc4nkHJ4NSgdW6nAA4dch3RRWXgns4tfUM1qZmvDcdZAbbx5+ITohig==", "title"=>"cool", "description"=>"cool", "commit"=>"Submit Post"}
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "cool"], ["description", "cool"], ["created_at", "2020-04-27 10:15:21.646472"], ["updated_at", "2020-04-27 10:15:21.646472"]]
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+No template found for PostsController#create, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 18.5ms)
+
+
