@@ -19,5 +19,5 @@ class PostsController < ApplicationController
   redirect_to 
   post_path(@post)
 end
-  # add create method here
+  
 end
